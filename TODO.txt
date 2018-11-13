@@ -1,0 +1,41 @@
+create-project : composer create-project --prefer-dist laravel/lumen {nom de l'application }
+Servir votre application : php -S localhost:8000 -t public 
+path of the controller  : app/Http/Controllers
+
+
+
+migrations : class definition with up() and down()
+The up() method is run when the migration is executed to apply changes to the database.
+The down() method is run to revert the changes
+If you need to update the database, you just create a new migration and voilà
+
+vagrant : environement de travail complet pour laravel
+configuration application :
+APP_KEY=> section user '' when the request it's filed you keep the request executed or trying again "don't give up "??
+APP_DEBUG=true
+
+
+
+LOG_CHANNEL=stack
+ ?
+
+
+CACHE_DRIVER=file
+
+?QUEUE_CONNECTION=sync??
+
+creat controller : in this path  app/Http/Controllers 
+
+
+commande executed in cmd :
+php artisan migrate:install  =>This command causes Artisan to create a special table in your database to keep track of what migrations have already been executed.
+
+php artisan make:migration [name of migration file like% create_users_table.php]  --create=[the name] =>migration file inside the application/migrations  2012_07_25_071925_create_users_table.php
+
+php artisan migrate
+
+
+create controller : user controller 
+view in the Router web.php
+Elequon => ??
+https://stackoverflow.com/questions/33254674/laravel-queryexception-in-connection-php-line-651-sqlstate42s02-base-table-o
